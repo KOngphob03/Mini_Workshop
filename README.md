@@ -156,4 +156,4 @@ console.log(result); // "ชำระเงินในรูปแบบ QR cod
 | การทอนเงิน | ทอนทุกกรณี | ทอนเฉพาะเงินสด (QR Code ไม่ต้องทอน) |
 
 ---
-README โดย GEMNI
+README โดย GEMINI
