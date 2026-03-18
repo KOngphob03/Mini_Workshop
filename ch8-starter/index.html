@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Management</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Payment Management</h1>
+
+      <form id="addCustomerForm">
+        <div class="row-container">
+          <p class="label">Customer Name</p>
+          <input id="customerName" type="text" value="" />
+        </div>
+        <div class="row-container">
+          <p class="label">Amount</p>
+          <input id="amount" type="text" value="" />
+        </div>
+        <div class="row-container">
+          <p class="label">Payment Method</p>
+          <select name="payment" id="paymentType">
+            <option value="Cash">Cash</option>
+            <option value="OnlineBanking">Online Banking</option>
+            <option value="CreditCard">Credit Card</option>
+          </select>
+        </div>
+        <div id="creditCardMetadata" class="nested hide">
+          <div class="row-container">
+            <p class="label">Card Number</p>
+            <input id="cardNumber" type="text" />
+          </div>
+          <div class="row-container">
+            <p class="label">Card Holder Name</p>
+            <input id="cardHolderName" type="text" />
+          </div>
+        </div>
+        <div id="onlineBankingMetadata" class="nested hide">
+          <div class="row-container">
+            <p class="label">Account Number</p>
+            <input id="accountNumber" type="text" />
+          </div>
+          <div class="row-container">
+            <p class="label">Bank Name</p>
+            <input id="bankName" type="text" />
+          </div>
+        </div>
+        <div class="row-container">
+          <p class="label">Is Verified</p>
+          <input type="checkbox" id="isVerified" />
+        </div>
+        <div class="card">
+          <button id="counter" type="submit">Submit</button>
+        </div>
+      </form>
+
+      <div id="message" class="message hide">action completed</div>
+
+      <hr />
+
+      <h2>Customer Payment Record</h2>
+
+      <table id="paymentTable" class="table">
+        <!-- <tr>
+          <th>Customer Name</th>
+          <th>Amount</th>
+          <th>Payment Method</th>
+          <th>Metadata</th>
+          <th>Verified</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>some data</td>
+          <td>other data</td>
+          <td>ye?</td>
+          <td>✅</td>
+        </tr> -->
+      </table>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
